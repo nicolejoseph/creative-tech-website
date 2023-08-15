@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nicole Joseph's Portfolio</title>
+    <!-- do I need ""./style.css" ? -->
+    <link rel="stylesheet" href="style.css"> 
+    <script src="https://kit.fontawesome.com/e83922ad40.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+<!-- <div id="header">
+</div> -->
+    <div class="banner">
+        <video autoplay loop muted plays-inline>
+            <source src="video1.mp4" type="video/mp4">
+        </video>
+
+        <div class="container">
+            <nav>
+                <!-- This is where you can put your personal logo or image -->
+                <img src = "mylogo2.png" class = "logo">
+                <ul>
+                    <!-- "li" is for your ordered list of tabs in the navigation bar -->
+                    <li><a href = "#">Home</a></li>
+                    <li><a href = "#">About</a></li>
+                    <li><a href = "#">Interactive Exhibitions</a></li>
+                    <li><a href = "#">AI/ML</a></li>
+                    <li><a href = "#">Random</a></li>
+                </ul>
+            </nav>
+        </div>
+    </div>
+
+    <!-------------------------------------------- About Me Section --------------------------------------------------->
+    <div id = "about">
+        <div class = "container">
+            <div class = "row">
+                <div class = "about-col-1"> 
+                    <img src = "me2.png">
+                </div>
+                <div class = "about-col-2"> 
+                    <h1 class = "sub-title"> Who Am I? </h1>
+                    <p>blah blah blah Supported by the Benjamin Menschel Fellowship Program, this project reflects on the 
+                        intersection of dance, body-tracking technology, and mobility. Our research involved talking to dancers, 
+                        choreographers, and set designers, through which we became interested in the ways that technology could 
+                        be used for storytelling in performance. Supported by the Benjamin Menschel Fellowship Program, this project reflects on the 
+                        intersection of dance, body-tracking technology, and mobility. Our research involved talking to dancers, 
+                        choreographers, and set designers, through which we became interested in the ways that technology could 
+                        be used for storytelling in performance. </p>
+                    <div class = "tab-titles">
+                        <p class = "tab-links active-link" onclick="opentab('experience', event)">Experience</p>
+                        <p class = "tab-links" onclick="opentab('contact', event)">Contact</p>
+                    </div>
+                    <div class = "tab-contents active-tab" id = "experience">
+                            <li><span>Affiliations:</span><br>Bachelor of Science in Engineering and Computer Science; Minor in Interdisciplinary Stdies blah blah</li>
+                            <li><span>Project Themes:</span><br>ba da bing ba da boom pow wow poo poo</li>
+                            <li><span>Current Location: </span><br>ba da bing ba da boom pow wow poo poo</li> 
+                    </div>
+                    <div class = "tab-contents" id = "contact">
+                        <!-- <ul>  FOR SOME REASON THIS UL TAG TOTALLY MESSED UP THE FORMATTING -->
+                            <li><span>Email:</span><br>nicolemariajj@gmail.com</li>
+                            <li><span>Phone:</span><br>347 204 4346 </li>
+                            <li><span>Other:</span><br>
+                            <div class = "social-icons">
+                                <a href=""><i class = "fa-brands fa-linkedin"></i></a>    
+                                <a href=""><i class="fa-brands fa-github"></i></a>  
+                            </div></li> 
+                        <!-- </ul> -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+ <!-------------------------------------------- AI/ML Section - photos and github links ---------------------------------------------------> 
+<div id = "portfolio">
+    <div class = "container">
+        <h1 class = "sub-title">AI/ML</h1>
+        <div class = "work-list">
+            <div class = "work">
+                <img src = "myImages/work1.png">
+                <div class="layer">
+                    <h3>Computer Vision</h3>
+                    <p>Collaborated with 4 students and a company advisor from 
+                        Memorial Sloan Kettering Cancer Center (MSKCC) to develop 
+                        a deep learning solution for automatic object detection in 
+                        cancer images.</p>
+                    <a href = "#"><i class="fa-solid fa-eye"></i></a>
+                </div>
+            </div>
+            <div class = "work">
+                <img src = "myImages/work2.png">
+                <div class="layer">
+                    <h3>Adversarial Autoencoders</h3>
+                    <p>Reproduced results from the paper “Adversarial Autoencoders” by Makhzani et al.
+                        Reproduced results from the paper “Adversarial Autoencoders” by Makhzani et al.</p>
+                    <a href = "#"><i class="fa-solid fa-eye"></i></a>
+                </div>
+            </div>
+            <div class = "work">
+                <img src = "myImages/work3.png">
+                <div class="layer">
+                    <h3>Blob Bodies</h3>
+                    <p>Application of Style Transfer to generate Body Tracking Art (Google's Blazepose and Pose Estimation Algorithms)</p>
+                    <a href = "#"><i class="fa-solid fa-eye"></i></a>
+                </div>
+            </div>
+        </div>
+        <a href = "#" class = "btn"> See more on GitHub!</a>
+    </div>
+</div>
+
+
+    <!-------------------------------------------- CHANGE THUS to Random Section --------------------------------------------------->
+<div id = "services">
+    <div class = "container">
+        <h1 class = "sub-title"> RANDOM </h1>
+        <div class = "services-list"> 
+            <div> 
+                <h2>Dance</h2>
+                <p>Collaborated with 4 students and a company advisor from 
+                    Memorial Sloan Kettering Cancer Center (MSKCC) to develop 
+                    a deep learning solution for automatic object detection in 
+                    cancer images.</p>
+                <a href = "#"> Learn More</a>
+            </div>
+            <div> 
+                <h2>Performance</h2>
+                <p>Reproduced results from the paper “Adversarial Autoencoders” by Makhzani et al.</p>
+                <a href = "#"> Learn More</a>
+            </div>
+            <div> 
+                <h2>Writing</h2>
+                <p>Application of Style Transfer to generate Body Tracking Art (Google's Blazepose and Pose Estimation Algorithms)</p>
+                <a href = "#"> Learn More</a>
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+
+<script>
+    var tablinks = document.getElementsByClassName("tab-links");
+    var tabcontents = document.getElementsByClassName("tab-contents");
+
+    function opentab(tabname){
+        for(tablink of tablinks){
+            tablink.classList.remove("active-link");
+        }
+        for(tabcontent of tabcontents){
+            tabcontent.classList.remove("active-tab");
+        }
+        event.currentTarget.classList.add("active-link");
+        document.getElementById(tabname).classList.add("active-tab");
+    }
+</script>
+</body>
+
+</html>

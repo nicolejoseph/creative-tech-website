@@ -1,0 +1,314 @@
+* {
+    /* change FONT later! */
+    font-family: 'Poppins', sans-serif;
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+  }
+  .banner{
+    width: 100%;
+    height: 100vh;
+    background-image: linear-gradient(rgba(0,0,0,0.40),rgba(0,0,0,0.40));
+    background-position: center;
+    background-size: center;
+}
+.banner video{
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    z-index: -1;
+}
+@media(min-aspect-ratio: 16/9){
+    .banner video{
+        width: 100%;
+        height: auto;
+    }
+}
+.container {
+    position: relative; /* Establishes the container as the positioning context for the image */
+    width: 100%; /* Set the container width to fill its parent, adjust as needed */
+    height: 100vh; /* Set the container height to fill the viewport, adjust as needed */
+    padding: 10px 0%;
+  }
+.logo {
+    position: absolute; /* Position the image relative to its container */
+    top: 50%; /* Position the top edge of the image at the vertical center of the container */
+    left: 50%; /* Position the left edge of the image at the horizontal center of the container */
+    transform: translate(-50%, -50%); /* Center the image precisely by moving it back by half its width and height */
+    max-width: 100%; /* Ensures the image won't exceed its original size */
+    width: 938px; /* Adjust this value to set the desired width */
+    height: auto; /* Allows the image to maintain its aspect ratio */
+  }
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+
+  ul {
+    display: flex; /* This ensures the <li> elements are displayed in a row */
+    list-style: none; /* Remove the default bullet points */
+    /* Add this property to move the tabs to the right side */ 
+    /* margin-right: auto; */
+    padding-right: -800px;
+}
+
+ul li {
+    margin: 10px 20px; /* Add some space between the tabs */
+}
+ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 18px;
+    position: relative;
+}
+/* Add the hover effect on nav bar text */
+ul li a::after{
+    content: '';
+    width: 0;
+    height: 3px;
+    background-color: #ffffff;
+    position: absolute;
+    left: 0;
+    bottom: -3px;
+    transition: width 0.5s;
+}
+ul li a:hover{
+    color: #ffffff
+}
+
+ul li a:hover::after{
+    width: 100%;
+}
+  
+  /* body{ */
+    /* background color */
+    /* background: #080808; */
+    /* text color */
+    /* color: #fff;
+  } */
+  /* #header{ */
+    /* this is for the width and height of the main photo */
+    /* width: 100%;
+    height: 100vh;
+    background-image: url(backgroundme.png);
+    background-size: cover;
+    background-position: center;
+  } */
+
+  /* <!-------------------------------------------- About Me Section ---------------------------------------------------> */
+#about {
+  padding: 80px 0; /* Change this for the padding around the image */
+  color: #ababab;
+  background-color: #000000;
+}
+.row{
+  display: flex; /* this means the image and text will be side by side*/
+  justify-content: space-between;
+  flex-wrap: wrap;
+  /* try smthg for hover effect */
+  transition: transform 0.5s;
+}
+.about-col-1 {
+  flex-basis: 40%; /*size of the left column */
+}
+.about-col-1 img{
+  /* this gives it rounded edges but ig it doesnt really matter lmao */
+  width: 100%;
+  border-radius: 15px;
+}
+.about-col-1:hover img {
+  transform: scale(1.1);
+}
+.about-col-2 {
+  flex-basis: 55%;
+}
+.sub-title { /* This is for the TITLE */
+  margin-bottom: 10px;
+  font-size: 60px;
+  font-weight: 600;
+  color: #fff;
+  transition: transform 0.5s;
+}
+.sub-title:hover {
+  /* NOTE: I want to add text hover effect BUT every time I change the scale to more than 1, all the dimensions get MESSED UP */
+  transform: scale(1.0);
+}
+
+.tab-titles{
+  display: flex;
+  margin: 20px 0 40px;
+  color: white; 
+}
+.tab-links {
+  margin-right: 50px;
+  font-size: 18px;
+  font-weight: 500;
+  cursor: pointer;
+  position: relative;
+}
+.tab-links::after{
+  content: '';
+  width: 0;
+  height: 3px;
+  background: #fb1d07; /* #ea0056 */
+  position: absolute;
+  left: 0;
+  bottom: -8px;
+  transition: 0.5s;
+}
+.tab-links.active-link::after{
+  width: 50% 
+}
+.tab-contents li {
+  list-style: none;
+  margin: 20px 0;
+  color: white; 
+}
+.tab-contents li span {
+  color: #ea0056;
+  font-size: 14px;
+}
+.tab-contents {
+  display: none;
+}
+.tab-contents.active-tab{
+  display: block;
+}
+.social-icons{
+  margin-top: 10px;
+}
+.social-icons a{
+  text-decoration:  none;
+  font-size: 30px;  
+  margin-right: 15;  
+  color: white; 
+  display: inline-block;  
+  transition: transform 0.5s;
+}
+.social-icons a:hover{
+  color:#ea0056;
+  transform: translateY(-5px);
+}
+/* <!-------------------------------------------- AI/ML Section - photos and github links ---------------------------------------------------> */
+#portfolio {
+  padding: 30px 80px;
+  background-color: #000000;
+}
+.work-list{
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  grid-gap: 40px;
+  margin-top: 50px;
+}
+.work {
+  border-radius: 10px;
+  position: relative;
+  overflow: hidden;
+}
+.work img {
+  width: 100%;
+  border-radius: 10px;
+  display: block;
+  transition: transform 0.5s;
+}
+.layer{
+  color: #fff;
+  font-size: 15px;
+  width: 100%;
+  height: 0;
+  background: linear-gradient(rgba(0,0,0,0.6), #ea0056);
+  border-radius: 10px;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center; 
+  flex-direction: column;
+  padding: 0 40px;
+  text-align: center;
+  transition: height 0.5s;
+}
+/* This is for the titles of the profjects */
+.layer h3{
+  font-size: 25px;
+  font-weight: 600;
+  margin-bottom: 20px;
+}
+/* This is for the link icon */
+.layer a{
+  margin-top: 20px;
+  color: #ea0056;
+  text-decoration: none;
+  font-size: 18px;
+  line-height: 60px;
+  background: #fff;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  text-align: center;
+}
+.work:hover img {
+  transform: scale(1.1);
+}
+.work:hover .layer {
+  height: 100%;
+}
+/* This is for the see more button */
+.btn{
+  display: block;
+  margin: 50px auto;
+  width: fit-content;
+  border: 1px solid #ea0056;
+  padding: 14px 50px;
+  border-radius: 6px;
+  text-decoration: none;
+  color:  #fff;
+  transition: background 0.5s;
+}
+.btn:hover{
+  background: #ea0056;
+}
+
+
+  /* <!-------------------------------------------- change this to RANDOM Section ---------------------------------------------------> */
+#services {
+  padding: 30px 80px;
+  background-color: #000000;
+}
+.services-list {
+  color: #fff;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  grid-gap: 40px;
+  margin-top: 50px;
+}
+.services-list div {
+  background: #262626;
+  padding: 40px;
+  font-size: 13px;
+  font-weight: 300;
+  border-radius: 10px; 
+  transition: background 0.5s, transform 0.5s;  
+}
+.services-list div h2 {
+  font-size: 30px;
+  font-weight: 500;
+  margin-bottom: 20px;
+}
+/* This is to change Learn More */
+.services-list div a { 
+  text-decoration: none;
+  color: #fff; 
+  font-size: 12px;
+  margin-top: 20px;
+  display: inline-block;
+}
+.services-list div:hover {
+  background: #ea0056;
+  transform: translateY(-10px)
+}
