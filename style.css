@@ -30,6 +30,7 @@
     height: 100vh; /* Set the container height to fill the viewport, adjust as needed */
     padding: 10px 0%;
   }
+
 .logo {
     position: absolute; /* Position the image relative to its container */
     top: 50%; /* Position the top edge of the image at the vertical center of the container */
@@ -192,6 +193,77 @@ ul li a:hover::after{
   color:#ea0056;
   transform: translateY(-5px);
 }
+/* <!-------------------------------------------- Creative Tech Section ---------------------------------------------------> */
+#creative {
+  padding: 30px 80px;
+  background-color: #000000;
+  height: 300vh; /* Set the height to 100% of the viewport height */
+  overflow-y: scroll; /* Enable vertical scrolling if content overflows */
+}
+/* For WebKit (Chrome, Safari) */
+#creative::-webkit-scrollbar {
+  width: 12px; /* Width of the scrollbar */
+}
+#creative::-webkit-scrollbar-thumb {
+  background-color: #fff; /* Color of the scrollbar thumb (the draggable part) */
+  border-radius: 6px; /* Round the corners of the thumb */
+}
+.project-boxes {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 20px;
+  padding: 40px 0; /* Add some padding for spacing */
+  display: flex; 
+  flex-direction: column; /* Stack content vertically */
+  justify-content: center; /* Center vertically */
+  align-items: center; /* Center horizontally */
+}
+.project-box {
+  background-color: black;
+  border: 1px solid #ea0056;
+  border-radius: 10px;
+  padding: 20px;
+  text-align: center;
+  transition: transform 0.3s;
+  width: 750px; /* Adjust the width of the project box */
+  height: 650px; /* Adjust the height of the project box */
+}
+.project-box:hover {
+  transform: scale(1.05);
+}
+/* This is for the Menschel Images */
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 10px;
+  margin-bottom: 10px;
+}
+.project-box a {
+  text-decoration: none;
+  color: white;
+}
+.project-box a:hover {
+  color: #ea0056; /* Change the text color to red on hover */
+}
+.project-box img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 10px;
+  margin-bottom: 10px;
+}
+.project-box h3 {
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+.project-box p {
+  font-size: 16px;
+  margin-bottom: 20px;
+}
+/* NOISE CREATES NOISE */
+
+
+
+
 /* <!-------------------------------------------- AI/ML Section - photos and github links ---------------------------------------------------> */
 #portfolio {
   padding: 30px 80px;
