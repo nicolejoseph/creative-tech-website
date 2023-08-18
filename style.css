@@ -5,40 +5,21 @@
     margin: 0;
     box-sizing: border-box;
   }
-  .banner{
+
+    /* <!-------------------------------------------- BANNER/ NAVIGATION BAR ---------------------------------------------------> */
+.banner{
     width: 100%;
-    height: 100vh;
+    height: 20vh;
     background-image: linear-gradient(rgba(0,0,0,0.40),rgba(0,0,0,0.40));
     background-position: center;
     background-size: center;
 }
-.banner video{
-    position: absolute;
-    right: 0;
-    bottom: 0;
-    z-index: -1;
-}
-@media(min-aspect-ratio: 16/9){
-    .banner video{
-        width: 100%;
-        height: auto;
-    }
-}
+
 .container {
     position: relative; /* Establishes the container as the positioning context for the image */
     width: 100%; /* Set the container width to fill its parent, adjust as needed */
     height: 100vh; /* Set the container height to fill the viewport, adjust as needed */
     padding: 10px 0%;
-  }
-
-.logo {
-    position: absolute; /* Position the image relative to its container */
-    top: 50%; /* Position the top edge of the image at the vertical center of the container */
-    left: 50%; /* Position the left edge of the image at the horizontal center of the container */
-    transform: translate(-50%, -50%); /* Center the image precisely by moving it back by half its width and height */
-    max-width: 100%; /* Ensures the image won't exceed its original size */
-    width: 938px; /* Adjust this value to set the desired width */
-    height: auto; /* Allows the image to maintain its aspect ratio */
   }
 
 nav {
@@ -83,51 +64,56 @@ ul li a:hover{
 ul li a:hover::after{
     width: 100%;
 }
-  
-  /* body{ */
-    /* background color */
-    /* background: #080808; */
-    /* text color */
-    /* color: #fff;
-  } */
-  /* #header{ */
-    /* this is for the width and height of the main photo */
-    /* width: 100%;
-    height: 100vh;
-    background-image: url(backgroundme.png);
-    background-size: cover;
-    background-position: center;
-  } */
 
-  /* <!-------------------------------------------- About Me Section ---------------------------------------------------> */
+    /* <!-------------------------------------------- About Me Section ---------------------------------------------------> */
 #about {
-  padding: 80px 0; /* Change this for the padding around the image */
+  padding: 0 0; /* Change this for the padding around the image */
   color: #ababab;
-  background-color: #000000;
+  /* background-color: #000000; */
   /* background-image: url('myImages/bg1.png'); 
   background-size: auto auto; 
   background-position: center;  */
+  position: relative;
+  overflow: hidden;
+}
+.video-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  transform: scaleX(-1); /* Horizontally flip the video */
+}
+.video-container video {
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
 }
 .row{
   display: flex; /* this means the image and text will be side by side*/
   justify-content: space-between;
   flex-wrap: wrap;
   /* try smthg for hover effect */
+  margin-top: -70px;
   transition: transform 0.5s;
 }
 .about-col-1 {
-  flex-basis: 40%; /*size of the left column */
+  flex-basis: 45%; /*size of the left column */
 }
 .about-col-1 img{
   /* this gives it rounded edges but ig it doesnt really matter lmao */
-  width: 100%;
-  border-radius: 15px;
+  width: 95%;
+  border-radius: 50%;
+  margin-top: -2px; /* You can adjust this value as needed */
+  margin-left: 30px;
 }
 .about-col-1:hover img {
   transform: scale(1.1);
 }
 .about-col-2 {
-  flex-basis: 55%;
+  flex-basis: 50%;
+  margin-right: 30px;
 }
 .sub-title { /* This is for the TITLE */
   margin-bottom: 10px;
@@ -136,11 +122,12 @@ ul li a:hover::after{
   color: #fff;
   transition: transform 0.5s;
 }
+
+
 .sub-title:hover {
   /* NOTE: I want to add text hover effect BUT every time I change the scale to more than 1, all the dimensions get MESSED UP */
   transform: scale(1.0);
 }
-
 .tab-titles{
   display: flex;
   margin: 20px 0 40px;
@@ -148,7 +135,7 @@ ul li a:hover::after{
 }
 .tab-links {
   margin-right: 50px;
-  font-size: 18px;
+  font-size: 20px;
   font-weight: 500;
   cursor: pointer;
   position: relative;
@@ -168,12 +155,12 @@ ul li a:hover::after{
 }
 .tab-contents li {
   list-style: none;
-  margin: 20px 0;
+  margin: 18px 0;
   color: white; 
 }
 .tab-contents li span {
   color: #ea0056;
-  font-size: 14px;
+  font-size: 20px;
 }
 .tab-contents {
   display: none;
@@ -196,17 +183,191 @@ ul li a:hover::after{
   color:#ea0056;
   transform: translateY(-5px);
 }
-/* <!-------------------------------------------- Creative Tech Section ---------------------------------------------------> */
+
+/* <!-------------------------------------------- MACHINE LEARNING SECTION ---------------------------------------------------> */
+#portfolio {
+  padding: 30px 80px;
+  background-color: black;
+  height: 125vh; 
+}
+.work-list{
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  grid-gap: 40px;
+  margin-top: 25px;
+}
+.work {
+  border-radius: 10px;
+  position: relative;
+  overflow: hidden;
+}
+.work img {
+  width: 100%;
+  border-radius: 10px;
+  display: block;
+  transition: transform 0.5s;
+}
+.layer{
+  color: #fff;
+  font-size: 15px;
+  width: 100%;
+  height: 0;
+  background: linear-gradient(rgba(0,0,0,0.6), #ea0056);
+  border-radius: 10px;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center; 
+  flex-direction: column;
+  padding: 0 40px;
+  text-align: center;
+  transition: height 0.5s;
+}
+/* This is for the titles of the profjects */
+.layer h3{
+  font-size: 25px;
+  font-weight: 600;
+  margin-bottom: 20px;
+}
+.layer h2{
+  font-size: 16px;
+  font-weight: 600;
+  margin-top: 20px;
+}
+/* This is for the link icon */
+.layer a{
+  margin-top: 20px;
+  color: #ea0056;
+  text-decoration: none;
+  font-size: 18px;
+  line-height: 60px;
+  background: #fff;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  text-align: center;
+}
+.work:hover img {
+  transform: scale(1.1);
+}
+.work:hover .layer {
+  height: 100%;
+}
+/* This is for the see more button */
+.btn{
+  display: block;
+  margin: 50px auto;
+  width: fit-content;
+  border: 1px solid #ea0056;
+  padding: 14px 50px;
+  border-radius: 6px;
+  text-decoration: none;
+  color:  #fff;
+  transition: background 0.5s;
+}
+.btn:hover{
+  background: #ea0056;
+}
+/* <!-------------------------------------------- NLP SECTION --------------------------------------------------->  */
+#portfolio2 {
+  padding: 30px 80px;
+  background-color: black;
+  height: 125vh; 
+}
+.work-list{
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  grid-gap: 40px;
+  margin-top: 25px;
+}
+.work {
+  border-radius: 10px;
+  position: relative;
+  overflow: hidden;
+}
+.work img {
+  width: 100%;
+  border-radius: 10px;
+  display: block;
+  transition: transform 0.5s;
+}
+.layer{
+  color: #fff;
+  font-size: 15px;
+  width: 100%;
+  height: 0;
+  background: linear-gradient(rgba(0,0,0,0.6), #ea0056);
+  border-radius: 10px;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center; 
+  flex-direction: column;
+  padding: 0 40px;
+  text-align: center;
+  transition: height 0.5s;
+}
+/* This is for the titles of the profjects */
+.layer h3{
+  font-size: 25px;
+  font-weight: 600;
+  margin-bottom: 20px;
+}
+.layer h2{
+  font-size: 16px;
+  font-weight: 600;
+  margin-top: 20px;
+}
+/* This is for the link icon */
+.layer a{
+  margin-top: 20px;
+  color: #ea0056;
+  text-decoration: none;
+  font-size: 18px;
+  line-height: 60px;
+  background: #fff;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  text-align: center;
+}
+.work:hover img {
+  transform: scale(1.1);
+}
+.work:hover .layer {
+  height: 100%;
+}
+/* This is for the see more button */
+.btn{
+  display: block;
+  margin: 50px auto;
+  width: fit-content;
+  border: 1px solid #ea0056;
+  padding: 14px 50px;
+  border-radius: 6px;
+  text-decoration: none;
+  color:  #fff;
+  transition: background 0.5s;
+}
+.btn:hover{
+  background: #ea0056;
+}
+/* <!-------------------------------------------- Creative Coding Section ---------------------------------------------------> */
 #creative {
   /* background-image: url('myImages/bg1.png'); 
   background-size: 125% auto; 
   background-position: center;  */
   padding: 30px 80px;
   background-color: #000000;
-  height: 450vh; /* Set the height to 100% of the viewport height */
+  height: 125vh; /* Set the height to 100% of the viewport height */
   overflow-y: scroll; /* Enable vertical scrolling if content overflows */
 }
-
 
 /* For WebKit (Chrome, Safari) */
 #creative::-webkit-scrollbar {
@@ -219,13 +380,16 @@ ul li a:hover::after{
 .project-boxes {
   display: grid;
   grid-template-columns: 1fr;
-  gap: 40px;
-  padding: 40px 0; /* Add some padding for spacing */
+  gap: 40px; 
+  /* Add some padding for spacing */
+  padding: 40px 0; 
   display: flex; 
   /* Stack content vertically (column) OR HORIZONTALLY (row) */
-  flex-direction: column; 
-  justify-content: center; /* Center vertically */
-  align-items: center; /* Center horizontally */
+  flex-direction: row; 
+  /* Center vertically */
+  justify-content: center; 
+  /* Center horizontally */
+  align-items: center; 
 }
 .project-box {
   background-color: rgba(0, 0, 0, 0.5);
@@ -237,6 +401,7 @@ ul li a:hover::after{
   transition: transform 0.3s;
   width: 750px; /* Adjust the width of the project box */
   height: 650px; /* Adjust the height of the project box */
+
 }
 .project-box:hover {
   transform: scale(1.05);
@@ -302,111 +467,127 @@ ul li a:hover::after{
   height: auto;
 }
 
-/* PROJECT BOX 4 */
-.project-box.project-box-4 {
-  width: 1000px; /* Adjust the width as needed */
+/* <!-------------------------------------------- GAMES Section ---------------------------------------------------> */
+#games {
+  /* background-image: url('myImages/bg1.png'); 
+  background-size: 125% auto; 
+  background-position: center;  */
+  padding: 30px 80px;
+  background-color: #000000;
+  height: 225vh; /* Set the height to 100% of the viewport height */
+}
+
+#games .sub-title {
+  margin-bottom: -10px; /* Adjust this value to decrease the distance */
+  font-size: 60px;
+  font-weight: 600;
+  color: #fff;
+  transition: transform 0.5s;
+}
+
+#games .project-boxes {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* Arrange in two columns */
+  gap: 40px;
+  padding: 40px 0; /* Add some padding for spacing */
+  justify-content: center; /* Center vertically */
+  align-items: center; /* Center horizontally */
+}
+#games .project-box {
+  background-color: rgba(0, 0, 0, 0.5);
+  /* background-color: black; */
+  border: 1px solid #ea0056;
+  border-radius: 10px;
+  padding: 20px;
+  text-align: center;
+  transition: transform 0.3s;
+  flex: 1; /* Use flex property to distribute available space evenly */
+  max-width: 600px; /* Set a maximum width for the project boxes */
+  margin: 20px 20px; /* Adjust margin as needed */
+  box-sizing: border-box;
+}
+#games .project-box:hover {
+  transform: scale(1.05);
+}
+/* This is for the Menschel Images */
+#games .grid-container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 10px;
+  margin-bottom: 10px;
+}
+#games .project-box a {
+  text-decoration: none;
+  color: white;
+}
+#games .project-box a:hover {
+  color: #ea0056; /* Change the text color to red on hover */
+}
+#games .project-box img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 10px;
+  margin-bottom: 10px;
+}
+#games .project-box h3 {
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+#games .project-box p {
+  font-size: 16px;
+  margin-bottom: 20px;
+}
+
+/* PROJECT BOX 2 */
+#games .project-box.project-box-2 {
+  width: 750px; /* Adjust the width as needed */
   height: 650px; /* Adjust the height as needed */
 }
-.project-box.project-box-4 .grid-container {
+#games .project-box.project-box-2 .grid-container {
   display: flex;
   justify-content: center; /* Center horizontally */
   align-items: center; /* Center vertically */
 }
 
-.project-box.project-box-4 img {
+#games .project-box.project-box-2 img {
+  max-width: 85%; /* Adjust the image size as needed */
+  height: auto;
+}
+
+/* PROJECT BOX 3 */
+#games .project-box.project-box-3 {
+  width: 750px; /* Adjust the width as needed */
+  height: 650px; /* Adjust the height as needed */
+}
+#games .project-box.project-box-3 .grid-container {
+  display: flex;
+  justify-content: center; /* Center horizontally */
+  align-items: center; /* Center vertically */
+}
+
+#games .project-box.project-box-3 img {
+  max-width: 80%; /* Adjust the image size as needed */
+  height: auto;
+}
+
+/* PROJECT BOX 4 */
+#games .project-box.project-box-4 {
+  width: 1000px; /* Adjust the width as needed */
+  height: 650px; /* Adjust the height as needed */
+}
+#games .project-box.project-box-4 .grid-container {
+  display: flex;
+  justify-content: center; /* Center horizontally */
+  align-items: center; /* Center vertically */
+}
+
+#games .project-box.project-box-4 img {
   max-width: 45%; /* Adjust the image size as needed */
   height: auto;
 }
 
 
-
-/* <!-------------------------------------------- AI/ML Section - photos and github links ---------------------------------------------------> */
-#portfolio {
-  padding: 30px 80px;
-  background-image: url('myImages/bg1.png'); 
-  background-size: 125% auto; 
-  background-position: center; 
-  height: 200vh; 
-}
-.work-list{
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  grid-gap: 40px;
-  margin-top: 50px;
-}
-.work {
-  border-radius: 10px;
-  position: relative;
-  overflow: hidden;
-}
-.work img {
-  width: 100%;
-  border-radius: 10px;
-  display: block;
-  transition: transform 0.5s;
-}
-.layer{
-  color: #fff;
-  font-size: 15px;
-  width: 100%;
-  height: 0;
-  background: linear-gradient(rgba(0,0,0,0.6), #ea0056);
-  border-radius: 10px;
-  position: absolute;
-  left: 0;
-  bottom: 0;
-  overflow: hidden;
-  display: flex;
-  align-items: center;
-  justify-content: center; 
-  flex-direction: column;
-  padding: 0 40px;
-  text-align: center;
-  transition: height 0.5s;
-}
-/* This is for the titles of the profjects */
-.layer h3{
-  font-size: 25px;
-  font-weight: 600;
-  margin-bottom: 20px;
-}
-/* This is for the link icon */
-.layer a{
-  margin-top: 20px;
-  color: #ea0056;
-  text-decoration: none;
-  font-size: 18px;
-  line-height: 60px;
-  background: #fff;
-  width: 60px;
-  height: 60px;
-  border-radius: 50%;
-  text-align: center;
-}
-.work:hover img {
-  transform: scale(1.1);
-}
-.work:hover .layer {
-  height: 100%;
-}
-/* This is for the see more button */
-.btn{
-  display: block;
-  margin: 50px auto;
-  width: fit-content;
-  border: 1px solid #ea0056;
-  padding: 14px 50px;
-  border-radius: 6px;
-  text-decoration: none;
-  color:  #fff;
-  transition: background 0.5s;
-}
-.btn:hover{
-  background: #ea0056;
-}
-
-
-  /* <!-------------------------------------------- change this to RANDOM Section ---------------------------------------------------> */
+  /* <!-------------------------------------------- OTHER ---------------------------------------------------> */
 #services {
   padding: 30px 80px;
   background-image: url('myImages/bg1.png'); 

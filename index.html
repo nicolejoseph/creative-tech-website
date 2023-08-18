@@ -11,56 +11,53 @@
 </head>
 
 <body>
-<!-- <div id="header">
-</div> -->
-<div id = "header"> 
-    <div class="banner">
-        <video autoplay loop muted plays-inline>
-            <source src="video1.mp4" type="video/mp4">
-        </video>
 
-        <div class="container">
-            <nav>
-                <!-- This is where you can put your personal logo or image -->
-                <img src = "mylogo2.png" class = "logo">
-                <ul>
-                    <!-- "li" is for your ordered list of tabs in the navigation bar -->
-                    <li><a href = "#header">Home</a></li>
-                    <li><a href = "#about">About</a></li>
-                    <li><a href = "#creative">Interactive Exhibitions</a></li>
-                    <li><a href = "#portfolio">AI/ML</a></li>
-                    <li><a href = "#services">Random</a></li>
-                </ul>
-            </nav>
-        </div>
-    </div>
-</div>
 
     <!-------------------------------------------- About Me Section --------------------------------------------------->
     <div id = "about">
-
+        <div class="video-container">
+            <video autoplay muted loop>
+              <source src="water-ripple1.mp4" type="video/mp4">
+              Your browser does not support the video tag.
+            </video>
+        </div>
+        <div class="banner">
+            <div class="container">
+                <nav>
+                    <ul>
+                        <!-- "li" is for your ordered list of tabs in the navigation bar -->
+                        <li><a href = "#about">About</a></li>
+                        <li><a href = "#portfolio">Machine Learning</a></li>
+                        <li><a href = "#portfolio2">Natural Language Processing</a></li>
+                        <li><a href = "#creative">Creative Coding</a></li>
+                        <li><a href = "#games">Game Design</a></li>
+                        <li><a href = "#services">Other</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
         <div class = "container">
             <div class = "row">
                 <div class = "about-col-1"> 
-                    <img src = "me2.png">
+                    <img src = "me1.png">
                 </div>
                 <div class = "about-col-2"> 
-                    <h1 class = "sub-title"> Who Am I? </h1>
-                    <p>blah blah blah Supported by the Benjamin Menschel Fellowship Program, this project reflects on the 
-                        intersection of dance, body-tracking technology, and mobility. Our research involved talking to dancers, 
-                        choreographers, and set designers, through which we became interested in the ways that technology could 
-                        be used for storytelling in performance. Supported by the Benjamin Menschel Fellowship Program, this project reflects on the 
-                        intersection of dance, body-tracking technology, and mobility. Our research involved talking to dancers, 
-                        choreographers, and set designers, through which we became interested in the ways that technology could 
-                        be used for storytelling in performance. </p>
+                    <h1 class = "sub-title"> Hi, I'm Nicole... </h1>
+                    <p>blah blah blah Pitbull (born January 15, 1981) is a Cuban-American MC, born and raised in Miami, Florida. Nowadays he’s left his MC abilities and centered his career in the Pop and mainstream industry.
+
+                        In 2001, Pitbull aka Mr.305 signed to Uncle Luke’s Records. There he started his career as MC, throwing out a series of mixtapes under the name of Unleashed. Through Uncle Luke Pitbull came to know people in the movement like Lil'Jon or The Diaz Brothers.
+                        
+                        In 2004, Pitbull releases his debut LP, M.I.A.M.I. Acronym of Money Is A Major Issue with the lead single Culo, produced by Lil'Jon and </p>
                     <div class = "tab-titles">
                         <p class = "tab-links active-link" onclick="opentab('experience', event)">Experience</p>
                         <p class = "tab-links" onclick="opentab('contact', event)">Contact</p>
                     </div>
                     <div class = "tab-contents active-tab" id = "experience">
-                            <li><span>Affiliations:</span><br>Bachelor of Science in Engineering and Computer Science; Minor in Interdisciplinary Stdies blah blah</li>
-                            <li><span>Project Themes:</span><br>ba da bing ba da boom pow wow poo poo</li>
-                            <li><span>Current Location: </span><br>ba da bing ba da boom pow wow poo poo</li> 
+                            <li><span>Affiliations:</span><br>The Cooper Union: B.S. in Engineering and Computer Science Minor <br> 
+                                Cornell University: Foundations in Machine Learning Certificate <br> Break Through Tech AI Program</li>
+                            <li><span>Skillset:</span><br>- Software Development<br>- Python, C++, Java Script, Java, HTML<br> 
+                                - Data Science and Analytics (NumPy, MatPlotLib, Pandas, Scikit Learn) <br> - Neural Network Design: TensorFlow, PyTorch <br> - Image Processing: OpenCV, Pillow </li>
+                            <li><span>Current Location: </span><br>New York</li> 
                     </div>
                     <div class = "tab-contents" id = "contact">
                         <!-- <ul>  FOR SOME REASON THIS UL TAG TOTALLY MESSED UP THE FORMATTING -->
@@ -78,10 +75,136 @@
         </div>
     </div>
 
-     <!-------------------------------------------- CREATIVE TECH SECTION --------------------------------------------------->
+ <!-------------------------------------------- MACHINE LEARNING SECTION ---------------------------------------------------> 
+ <div id = "portfolio">
+    <div class = "container">
+        <h1 class = "sub-title">MACHINE LEARNING</h1>
+        <div class = "work-list">
+            <div class = "work">
+                <img src = "myImages/work1.png">
+                <div class="layer">
+                    <h3>Image Processing System</h3>
+                    <p> Collaborated with 4 students and a company advisor from 
+                        Memorial Sloan Kettering Cancer Center (MSKCC) to develop 
+                        a deep learning solution for automatic object detection in 
+                        cancer images.</p>
+                    <h2>Tags: Computer Vision, Image Processing, Deep Learning, TensorFlow</h2>
+                    <a href = "https://github.com/nicolejoseph/MSKCC-AI-Studio-Project"><i class="fa-solid fa-link"></i></a>
+                </div>
+            </div>
+            <div class = "work">
+                <img src = "myImages/work2.png">
+                <div class="layer">
+                    <h3>Adversarial Autoencoders; <br> Research Project</h3>
+                    <p> Reproduced results from the paper “Adversarial Autoencoders” by Makhzani et al.
+                        Reproduced results from the paper “Adversarial Autoencoders” by Makhzani et al.</p>
+                    <h2>Tags: Generative AI, Image Synthesis, Guassian Distribution, Deep Learning</h2>
+                    <a href = "https://github.com/nicolejoseph/Adversarial-Autoencoder"><i class="fa-solid fa-link"></i></a>
+                </div>
+            </div>
+            <div class = "work">
+                <img src = "myImages/work3.png">
+                <div class="layer">
+                    <h3>"Blob Bodies"</h3>
+                    <p>Application of Style Transfer to generate Body Tracking Art (Google's Blazepose and Pose Estimation Algorithms)</p>
+                    <h2>Tags: Image Segmentation, Pose Estimation Algorithms, Style Transfer</h2>
+                    <a href = "https://github.com/nicolejoseph/Blob-Bodies"><i class="fa-solid fa-link"></i></a>
+                </div>
+            </div>
+        </div>
+        <a href = "https://github.com/nicolejoseph/Deep-Learning" class = "btn"> See More Deep Learning Projects</a>
+    </div>
+</div>
+ <!-------------------------------------------- NLP SECTION ---------------------------------------------------> 
+ <div id = "portfolio2">
+    <div class = "container">
+        <h1 class = "sub-title">NATURAL LANGUAGE PROCESSING</h1>
+        <div class = "work-list">
+            <div class = "work">
+                <img src = "NLP/tweets3.png">
+                <div class="layer">
+                    <h3>Text Classification and Sentiment Analysis</h3>
+                    <p> Collaborated with 4 students and a company advisor from 
+                        Memorial Sloan Kettering Cancer Center (MSKCC) to develop 
+                        a deep learning solution for automatic object detection in 
+                        cancer images.</p>
+                    <h2>Tags: Computer Vision, Image Processing, Deep Learning, TensorFlow</h2>
+                    <a href = "https://github.com/nicolejoseph/MSKCC-AI-Studio-Project"><i class="fa-solid fa-link"></i></a>
+                </div>
+            </div>
+            <div class = "work">
+                <img src = "NLP/array-crop2.png">
+                <div class="layer">
+                    <h3>Web-Scraping; <br> Data Science for Social Good</h3>
+                    <p> Reproduced results from the paper “Adversarial Autoencoders” by Makhzani et al.
+                        Reproduced results from the paper “Adversarial Autoencoders” by Makhzani et al.</p>
+                    <h2>Tags: Generative AI, Image Synthesis, Guassian Distribution, Deep Learning</h2>
+                    <a href = "https://github.com/nicolejoseph/Adversarial-Autoencoder"><i class="fa-solid fa-link"></i></a>
+                </div>
+            </div>
+            <div class = "work">
+                <img src = "NLP/movie3.png">
+                <div class="layer">
+                    <h3>Movie Recommendation System</h3>
+                    <p>Application of Style Transfer to generate Body Tracking Art (Google's Blazepose and Pose Estimation Algorithms)</p>
+                    <h2>Tags: Image Segmentation, Pose Estimation Algorithms, Style Transfer</h2>
+                    <a href = "https://github.com/nicolejoseph/Blob-Bodies"><i class="fa-solid fa-link"></i></a>
+                </div>
+            </div>
+        </div>
+        <a href = "https://github.com/nicolejoseph/Deep-Learning" class = "btn"> See More Deep Learning Projects</a>
+    </div>
+</div>
+     <!-------------------------------------------- CREATIVE CODING SECTION --------------------------------------------------->
      <div id="creative">
         <div class="container">
-            <h1 class="sub-title">Interactive Exhibitions</h1>
+            <h1 class="sub-title">Creative Coding</h1>
+            <div class="project-boxes">
+                <div class="project-box">
+                    <a href="project-details-1.html">
+                        <h3>Reflections on Dance, Mobility, and BodyTracking </h3>
+                        <div class="grid-container"> 
+                            <img src="myImages/digital-movement1.jpg" alt="Project 1 Image">
+                            <img src="myImages/digital-movement2.jpg" alt="Project 2 Image">
+                            <img src="myImages/digital-movement3.jpg" alt="Project 3 Image">
+                            <img src="myImages/digital-movement4.jpg" alt="Project 4 Image">
+                        </div>
+                        <p>As a Benjamin Menschel Fellow, I designed an interactive installation that connects bodytracking 
+                            and generative visual graphics for dance performance.</p>
+                    </a>
+                </div>
+
+                <div class="project-box project-box-2">
+                    <a href="https://www.youtube.com/watch?v=qzNoci3tqSs&t=15s">
+                        <h3>Noise Creates Noise</h3>
+                        <div class="grid-container">
+                            <img src="myImages/axidraw-grid.png" alt="Project 2 Image">
+                        </div>
+                        <p>These drawings were generated by a python script that controls pen plotter movement. 
+                            As the computer picks up noise from the environment, mathematical noise is added to the SVG drawing.
+                            </p>
+                    </a>
+                </div>
+
+                <div class="project-box project-box-3">
+                    <a href="project-details-3.html">
+                        <h3>Emotion Reactive Photobooth</h3>
+                        <div class="grid-container">
+                            <img src="myImages/crop-photobooth.jpg" alt="Project 3 Image">
+                        </div>
+                        <p>These drawings were generated by a python script that controls pen plotter movement. 
+                            As the computer picks up noise from the environment, mathematical noise is added to the SVG drawing.
+                            </p>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-------------------------------------------- Games Section --------------------------------------------------->
+    <div id="games"> 
+        <div class="container">
+            <h1 class="sub-title">Game Design</h1>
             <div class="project-boxes">
                 <div class="project-box">
                     <a href="project-details-1.html">
@@ -142,50 +265,17 @@
 
         </div>
     </div>
+
+
+    
       
 
- <!-------------------------------------------- AI/ML Section - photos and github links ---------------------------------------------------> 
-<div id = "portfolio">
-    <div class = "container">
-        <h1 class = "sub-title">AI/ML</h1>
-        <div class = "work-list">
-            <div class = "work">
-                <img src = "myImages/work1.png">
-                <div class="layer">
-                    <h3>Computer Vision</h3>
-                    <p>Collaborated with 4 students and a company advisor from 
-                        Memorial Sloan Kettering Cancer Center (MSKCC) to develop 
-                        a deep learning solution for automatic object detection in 
-                        cancer images.</p>
-                    <a href = "https://github.com/nicolejoseph/MSKCC-AI-Studio-Project"><i class="fa-solid fa-eye"></i></a>
-                </div>
-            </div>
-            <div class = "work">
-                <img src = "myImages/work2.png">
-                <div class="layer">
-                    <h3>Adversarial Autoencoders</h3>
-                    <p>Reproduced results from the paper “Adversarial Autoencoders” by Makhzani et al.
-                        Reproduced results from the paper “Adversarial Autoencoders” by Makhzani et al.</p>
-                    <a href = "https://github.com/nicolejoseph/Adversarial-Autoencoder"><i class="fa-solid fa-eye"></i></a>
-                </div>
-            </div>
-            <div class = "work">
-                <img src = "myImages/work3.png">
-                <div class="layer">
-                    <h3>Blob Bodies</h3>
-                    <p>Application of Style Transfer to generate Body Tracking Art (Google's Blazepose and Pose Estimation Algorithms)</p>
-                    <a href = "https://github.com/nicolejoseph/Blob-Bodies"><i class="fa-solid fa-eye"></i></a>
-                </div>
-            </div>
-        </div>
-        <a href = "https://github.com/nicolejoseph" class = "btn"> See more on GitHub!</a>
-    </div>
-</div>
 
-    <!-------------------------------------------- CHANGE THUS to Random Section --------------------------------------------------->
+
+    <!-------------------------------------------- Other Section --------------------------------------------------->
 <div id = "services">
     <div class = "container">
-        <h1 class = "sub-title"> RANDOM </h1>
+        <h1 class = "sub-title"> OTHER </h1>
         <div class = "services-list"> 
             <div> 
                 <h2>Dance</h2>
